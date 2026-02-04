@@ -1,10 +1,15 @@
-# PhishDetect / PhishGuard
+# PhishDetector
 
 End-to-end phishing URL detection project with:
 - A Flask ML API for classifying URLs.
 - A static web UI for quick checks.
 - A Chrome extension that classifies the active tab.
 - Data prep + training scripts for model updates.
+
+## Live Demo
+```
+https://aiphishdetector.netlify.app/
+```
 
 ## What’s Inside
 - `backend/` Flask API, model training, and saved model artifacts.
@@ -80,4 +85,3 @@ By default it points to a hosted API (`onrender.com`). Update the fetch URL if y
 - The extension currently posts to `http://127.0.0.1:5000/classify` by default, but the API route is `/analyze`.
   Update the extension or add a `/classify` route if needed.
 - `backend/venv/` is checked in; you can ignore it and create your own environment.
-
