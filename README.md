@@ -14,6 +14,7 @@ https://aiphishdetector.netlify.app/
 - `backend/` Flask API, model training, and saved model artifacts.
 - `frontend/` Static single-page UI that calls the API.
 - `data/` Data conversion and training helper scripts + datasets.
+- `docs/` Detailed documentation and architecture diagrams.
 
 ## How It Works
 - Training (`backend/train_real.py`) builds a TF‑IDF + RandomForest model from URL text.
