@@ -27,6 +27,9 @@ def explain_from_url(url):
     if not reasons:
         reasons = ["No obvious heuristics matched"]
     return reasons
+# @app.route("/", methods=["GET"])
+# def home():
+#     return jsonify({"message": "Phish Detector API running"})
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
@@ -61,4 +64,5 @@ def analyze():
 
 if __name__ == "__main__":
     # default Flask port 5000; you may run behind different host/port
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    # debug=False for production use
+    app.run(host="0.0.0.0", port=5000, debug=False)
