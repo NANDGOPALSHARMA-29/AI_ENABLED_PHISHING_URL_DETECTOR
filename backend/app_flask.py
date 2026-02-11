@@ -8,9 +8,14 @@ app = Flask(__name__)
 CORS(app)
 
 # load model + vectorizer (make sure these files exist in backend/)
+import os
 print("Loading model & vectorizer...")
-model = joblib.load("model.pkl")         # RandomForest
-vectorizer = joblib.load("vectorizer.pkl")  # TfidfVectorizer
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "model.pkl")
+vectorizer_path = os.path.join(BASE_DIR, "vectorizer.pkl")
+
+model = joblib.load(model_path)         # RandomForest
+vectorizer = joblib.load(vectorizer_path)  # TfidfVectorizer
 print("Loaded model and vectorizer.")
 
 def explain_from_url(url):
